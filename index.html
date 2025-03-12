@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hung Phong Tech - Leading IT Solutions for Software Development, AI Integration, and Digital Transformation">
+    <meta name="keywords" content="software development, AI solutions, digital transformation, IT consulting, Hung Phong Tech">
+    <title>Hung Phong Tech - Innovate Your Future</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Thêm FontAwesome -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #1e3a8a;
+            background-color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #10b981), url('header-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .lang-switch a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .lang-switch a:hover {
+            color: #f43f5e;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.8em;
+            margin-bottom: 40px;
+            color: #1e3a8a;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: #10b981;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Intro */
+        #intro {
+            background: url('about-bg.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+        }
+
+        #intro .content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #374151;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Services */
+        #services .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-items: center;
+        }
+
+        #services .service-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 350px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #services .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        #services .service-icon {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5em;
+        }
+
+        #services h3 {
+            color: #f43f5e;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        #services p {
+            color: #64748b;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        /* Why Us */
+        #why-us .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+            justify-items: center;
+        }
+
+        #why-us .why-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 300px;
+            transition: transform 0.3s;
+        }
+
+        #why-us .why-item:hover {
+            transform: translateY(-10px);
+        }
+
+        #why-us h3 {
+            color: #1e3a8a;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        #why-us p {
+            color: #64748b;
+            font-size: 1em;
+        }
+
+        /* Contact */
+        #contact {
+            background: linear-gradient(135deg, #1e3a8a, #10b981);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        #contact h2 {
+            margin-bottom: 40px;
+        }
+
+        #contact .contact-info {
+            max-width: 900px;
+            margin: 0 auto 40px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        #contact .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1em;
+        }
+
+        #contact .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: #f43f5e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        #contact .cta-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(90deg, #f43f5e, #10b981);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        #contact .cta-btn:hover {
+            transform: scale(1.1);
+            background: linear-gradient(90deg, #10b981, #f43f5e);
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3a8a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        /* Language Control */
+        .en { display: block; }
+        .jp { display: none; }
+
+        @media (max-width: 1024px) {
+            #services .service-grid, #why-us .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            #contact .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5em; }
+            section h2 { font-size: 2.2em; }
+            #services .service-grid, #why-us .why-grid {
+                grid-template-columns: 1fr;
+            }
+            #contact .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            #contact .cta-btn { padding: 10px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Hung Phong Tech</h1>
+        <div class="lang-switch">
+            <a onclick="switchLang('en')">EN</a> | <a onclick="switchLang('jp')">JP</a>
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <section id="intro">
+        <h2 class="en">About Us</h2>
+        <h2 class="jp">私たちについて</h2>
+        <div class="content en">
+            <p>Hung Phong Tech Co., Ltd. is a cutting-edge IT solutions provider, dedicated to empowering businesses with innovative technology. With a vision to shape the future of digital transformation, we deliver advanced software development, AI integration, and strategic consulting services to drive sustainable growth.</p>
+        </div>
+        <div class="content jp">
+            <p>フンフォンテック株式会社は、先進的なITソリューションを提供する革新的な企業であり、ビジネスを強化する技術に専念しています。デジタルトランスフォーメーションの未来を形作るビジョンを持ち、ソフトウェア開発、AI統合、戦略的コンサルティングを通じて持続可能な成長を推進します。</p>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <h2 class="en">Our Services</h2>
+        <h2 class="jp">サービス</h2>
+        <div class="service-grid en">
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Digital Transformation Consulting</h3>
+                <p>Strategic guidance to modernize your business operations and embrace digital innovation.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>Software Development Consulting</h3>
+                <p>Expert advice to design and implement tailored software solutions for your needs.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-code"></i></div>
+                <h3>Software Development</h3>
+                <p>Custom-built applications to optimize processes and enhance productivity.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-robot"></i></div>
+                <h3>AI Application Integration</h3>
+                <p>Seamless integration of AI technologies to unlock new opportunities and efficiencies.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h3>Maintenance & Support</h3>
+                <p>Ongoing support to ensure your systems run smoothly and efficiently.</p>
+            </div>
+        </div>
+        <div class="service-grid jp">
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>デジタルトランスフォーメーションコンサルティング</h3>
+                <p>ビジネス運営を近代化し、デジタルイノベーションを取り入れるための戦略的ガイダンス。</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>ソフトウェア開発コンサルティング</h3>
+                <p>お客様のニーズに合わせたソフトウェアソリューションの設計と実装に関する専門的アドバイス。</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-code"></i></div>
+                <h3>ソフトウェア開発</h3>
+                <p>プロセスを最適化し、生産性を向上させるカスタム構築アプリケーション。</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-robot"></i></div>
+                <h3>AIアプリケーション統合</h3>
+                <p>新しい機会と効率性を引き出すためのAI技術のシームレスな統合。</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon"><i class="fas fa-tools"></i></div>
+                <h3>メンテナンスとサポート</h3>
+                <p>システムがスムーズかつ効率的に稼働するための継続的なサポート。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section id="why-us">
+        <h2 class="en">Why Choose Us</h2>
+        <h2 class="jp">私たちを選ぶ理由</h2>
+        <div class="why-grid en">
+            <div class="why-item">
+                <h3>Expertise</h3>
+                <p>A team of seasoned professionals with deep industry knowledge.</p>
+            </div>
+            <div class="why-item">
+                <h3>Innovation</h3>
+                <p>Leveraging the latest technologies to deliver forward-thinking solutions.</p>
+            </div>
+            <div class="why-item">
+                <h3>Partnership</h3>
+                <p>Committed to your success with a collaborative and transparent approach.</p>
+            </div>
+        </div>
+        <div class="why-grid jp">
+            <div class="why-item">
+                <h3>専門知識</h3>
+                <p>豊富な業界知識を持つ経験豊富なプロフェッショナルのチーム。</p>
+            </div>
+            <div class="why-item">
+                <h3>イノベーション</h3>
+                <p>最新技術を活用して未来志向のソリューションを提供。</p>
+            </div>
+            <div class="why-item">
+                <h3>パートナーシップ</h3>
+                <p>協力的かつ透明性のあるアプローチでお客様の成功にコミット。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2 class="en">Contact Us</h2>
+        <h2 class="jp">お問い合わせ</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <span class="en">Email: info@hungphongtech.com</span>
+                <span class="jp">メール: info@hungphongtech.com</span>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <span class="en">Hotline: (+84) 123 456 789</span>
+                <span class="jp">ホットライン: (+84) 123 456 789</span>
+            </div>
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <span class="en">Address: 123 Tech Street, Ho Chi Minh City, Vietnam</span>
+                <span class="jp">住所: ベトナム、ホーチミン市、技術通り123</span>
+            </div>
+        </div>
+        <a href="mailto:info@hungphongtech.com" class="cta-btn en">Get in Touch</a>
+        <a href="mailto:info@hungphongtech.com" class="cta-btn jp">お問い合わせ</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="en">© 2025 Hung Phong Tech Co., Ltd. All rights reserved.</p>
+        <p class="jp">© 2025 フンフォンテック株式会社。全著作権所有。</p>
+    </footer>
+
+    <!-- JavaScript for Language Switch -->
+    <script>
+        window.onload = function() {
+            switchLang('en');
+        };
+
+        function switchLang(lang) {
+            document.querySelectorAll('.en, .jp').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.querySelectorAll('.' + lang).forEach(el => {
+                el.style.display = 'block';
+            });
+            document.querySelectorAll('.service-grid, .why-grid').forEach(grid => {
+                grid.style.display = 'none';
+            });
+            document.querySelector('.service-grid.' + lang).style.display = 'grid';
+            document.querySelector('.why-grid.' + lang).style.display = 'grid';
+        }
+    </script>
+</body>
+</html>
